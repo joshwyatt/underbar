@@ -11,6 +11,12 @@ var _ = {};
     return val;
   };
 
+  _.negate = function(fn) {
+    return function() {
+      return !fn.apply(this, arguments);
+    };
+  }
+
   /**
    * COLLECTIONS
    * ===========
